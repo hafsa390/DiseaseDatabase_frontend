@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Disease Details</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="header_left">
+        <h1 class="header_title">Manitoba Rare Disease Database</h1>
+        <h4>Disease Details</h4>
+      </div>
+    </div>
+    <div class="formContainer">
+      <div style="width: 50%;">
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-bottom: 60px;
+          "
+        >
+          <button id="editBtnId" style="margin-right: 10px;" class="btn">
+            Edit
+          </button>
+          <button id="deleteBtnId" class="btn">
+            Delete
+          </button>
+        </div>
+        <div class="textBoxContainer">
+          <label>ID:</label>
+          <input id="orphaCode_field" disabled class="textBox nonEditable" />
+        </div>
+        <div class="textBoxContainer">
+          <label>Disease Name:</label>
+          <input id="name_field" disabled class="textBox nonEditable" />
+        </div>
+        <div class="textBoxContainer">
+          <label>Disease Abbreviation:</label>
+          <input id="abbr_field" disabled class="textBox nonEditable" />
+        </div>
+        <div class="textBoxContainer">
+          <label>Disease Subcategory:</label>
+          <input id="subcategory_field" disabled class="textBox nonEditable" />
+        </div>
+        <div class="textBoxContainer">
+          <label>Gene:</label>
+          <input id="gene_field" disabled class="textBox nonEditable" />
+        </div>
+        <div class="textBoxContainer">
+          <label>Gene Reference:</label>
+          <input id="gene_ref_field" disabled class="textBox nonEditable" />
+        </div>
+        <ul
+          style="margin-top: 30px;"
+          id="disease_images_holder"
+          class="disease_images_holder"
+        ></ul>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="../js/controller/diseaseDetails.js"></script>
+</html>

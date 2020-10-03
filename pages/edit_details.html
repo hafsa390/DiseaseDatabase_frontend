@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Edit Disease</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="header_left">
+        <h1 class="header_title">Manitoba Rare Disease Database</h1>
+        <h4>Edit Disease Details</h4>
+      </div>
+    </div>
+    <div class="formContainer">
+      <div style="width: 50%;">
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-bottom: 60px;
+          "
+        >
+          <button id="confirmBtnId" style="margin-right: 10px;" class="btn">
+            Confirm
+          </button>
+          <button id="cancelBtnId" class="btn">
+            Cancel
+          </button>
+        </div>
+        <div class="textBoxContainer">
+          <label>ID:</label>
+          <input
+            id="orphaCode_field"
+            placeholder="required"
+            class="textBox"
+            nonEditable
+            disabled
+          />
+        </div>
+        <div class="textBoxContainer">
+          <label>Disease Name:</label>
+          <input id="name_field" placeholder="required" class="textBox" />
+        </div>
+        <div class="textBoxContainer">
+          <label>Disease Abbreviation:</label>
+          <input id="abbr_field" class="textBox" />
+        </div>
+        <div class="textBoxContainer">
+          <label>Disease Subcategory:</label>
+          <input id="subcategory_field" class="textBox" />
+        </div>
+        <div class="textBoxContainer">
+          <label>Gene:</label>
+          <input id="gene_field" class="textBox" />
+        </div>
+        <div class="textBoxContainer">
+          <label>Gene Reference:</label>
+          <input id="gene_ref_field" class="textBox" />
+        </div>
+        <ul
+          style="margin-top: 30px;"
+          id="disease_images_holder"
+          class="disease_images_holder"
+        ></ul>
+        <ul
+          style="margin-top: 30px;"
+          id="new_disease_images_holder"
+          class="new_disease_images_holder"
+        ></ul>
+        <label style="margin-top: 30px; margin-right: 20px;"
+          >Add more images</label
+        >
+        <input
+          class="btn"
+          id="imageSelector"
+          value="Choose Images"
+          type="file"
+          accept="image/jpeg, image/png"
+          multiple
+        />
+      </div>
+    </div>
+  </body>
+  <script type="module" src="../js/controller/editDetails.js"></script>
+</html>
