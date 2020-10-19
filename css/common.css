@@ -7,6 +7,11 @@
   margin-top: 30px;
   margin-bottom: 50px;
 }
+
+.header_left {
+  display: flex;
+}
+
 .menu {
   margin: 2em 0em 0.3em 0em;
 }
