@@ -26,19 +26,20 @@ document
   });
 
 document.getElementById("submitBtn").addEventListener("click", () => {
-  let files = undefined;
-  let refs = undefined;
-  if (fileList !== undefined && fileList.length > 0) {
-    files = [];
-    refs = [];
-    Object.keys(fileList).forEach((key) => {
-      const file = fileList[key];
-      const ref = document.getElementById(`input-${file.name}`).value;
-      files.push(file);
-      refs.push(ref);
-    });
-  }
-  addDisease(files, refs);
+  // let files = undefined;
+  // let refs = undefined;
+  // if (fileList !== undefined && fileList.length > 0) {
+  //   files = [];
+  //   refs = [];
+  //   Object.keys(fileList).forEach((key) => {
+  //     const file = fileList[key];
+  //     const ref = document.getElementById(`input-${file.name}`).value;
+  //     files.push(file);
+  //     refs.push(ref);
+  //   });
+  // }
+  // addDisease(files, refs);
+  alert("You are not allowed to submit any change.")  
 });
 
 document.getElementById("cancelBtnId").addEventListener("click", function () {
