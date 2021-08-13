@@ -39,7 +39,7 @@ document.getElementById("submitBtn").addEventListener("click", () => {
   //   });
   // }
   // addDisease(files, refs);
-  alert("You are not allowed to submit any change.")  
+  alert("You are not allowed to add new disease record.")  
 });
 
 document.getElementById("cancelBtnId").addEventListener("click", function () {
