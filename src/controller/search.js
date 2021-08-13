@@ -26,7 +26,7 @@ geneRadioBtn.addEventListener("change", () => {
 
 categoryRadioBtn.addEventListener("change", () => {
   if (categoryRadioBtn.checked) {
-    searchBox.placeholder = "Search by disease category";
+    searchBox.placeholder = "Search by disease subcategory";
     searchBy = "category";
   }
 });
