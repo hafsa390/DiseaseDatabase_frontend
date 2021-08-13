@@ -42,18 +42,18 @@ alert("You are not allowed to edit the record")
 });
 
 document.getElementById("deleteBtnId").addEventListener("click", function () {
-  const isApproved = confirm("Are you sure to remove this disease?");
-  if (isApproved) {
-    removeDiseaseApi(disease.id, (response) => {
-      if (response === null) {
-        alert("Something went wrong. Please try again later.");
-        return;
-      }
-      alert(response.message);
-      if (response.success) {
-        location.href = "browse.html";
-      }
-    });
-  }
-  //alert("You are not allowed to delete the record.");
+  // const isApproved = confirm("Are you sure to remove this disease?");
+  // if (isApproved) {
+  //   removeDiseaseApi(disease.id, (response) => {
+  //     if (response === null) {
+  //       alert("Something went wrong. Please try again later.");
+  //       return;
+  //     }
+  //     alert(response.message);
+  //     if (response.success) {
+  //       location.href = "browse.html";
+  //     }
+  //   });
+  // }
+  alert("You are not allowed to delete the record.");
 });
