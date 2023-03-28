@@ -1,4 +1,4 @@
-import { baseUrl } from "../config/config.js";
+import { baseUrl } from "../../config/config.js";
 
 export const get = (endpoint, callback, queryParams = "") => {
   const url =

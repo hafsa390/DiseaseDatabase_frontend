@@ -1,5 +1,5 @@
 import { getDiseaseImagesApi } from "../service/imageApi.js";
-import { baseUrl } from "../config/config.js";
+import { baseUrl } from "../../config/config.js";
 import { removeDiseaseApi } from "../service/diseaseApi.js";
 
 const disease = JSON.parse(localStorage.getItem("disease"));

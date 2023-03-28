@@ -1,4 +1,4 @@
-import { baseUrl } from "../config/config.js";
+import { baseUrl } from "../../config/config.js";
 
 console.log("in header.js");
 

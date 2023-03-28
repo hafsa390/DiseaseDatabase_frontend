@@ -1,5 +1,5 @@
 import { searchDiseases } from "../service/diseaseApi.js";
-import { baseUrl } from "../config/config.js";
+import { baseUrl } from "../../config/config.js";
 
 const nameRadioBtn = document.getElementById("radio-disease-name");
 const geneRadioBtn = document.getElementById("radio-disease-gene");

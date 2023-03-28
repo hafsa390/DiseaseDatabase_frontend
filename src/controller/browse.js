@@ -2,7 +2,7 @@ import {
   getAllCategories,
   getDiseasesByCategory,
 } from "../service/diseaseApi.js";
-import { baseUrl } from "../config/config.js";
+import { baseUrl } from "../../config/config.js";
 
 const categoryContainer = document.getElementById("category_container");
 const table = document.getElementById("diseaseTable");
