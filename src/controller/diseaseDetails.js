@@ -37,23 +37,23 @@ getDiseaseImagesApi(disease.id, (data) => {
 });
 
 document.getElementById("editBtnId").addEventListener("click", function () {
-//  location.href = "edit_details.html";
-alert("You are not allowed to edit the record") 
+ location.href = "edit_details.html";
+// alert("You are not allowed to edit the record") 
 });
 
 document.getElementById("deleteBtnId").addEventListener("click", function () {
-  // const isApproved = confirm("Are you sure to remove this disease?");
-  // if (isApproved) {
-  //   removeDiseaseApi(disease.id, (response) => {
-  //     if (response === null) {
-  //       alert("Something went wrong. Please try again later.");
-  //       return;
-  //     }
-  //     alert(response.message);
-  //     if (response.success) {
-  //       location.href = "browse.html";
-  //     }
-  //   });
-  // }
+  const isApproved = confirm("Are you sure to remove this disease?");
+  if (isApproved) {
+    removeDiseaseApi(disease.id, (response) => {
+      if (response === null) {
+        alert("Something went wrong. Please try again later.");
+        return;
+      }
+      alert(response.message);
+      if (response.success) {
+        location.href = "browse.html";
+      }
+    });
+  }
   alert("You are not allowed to delete the record.");
 });
