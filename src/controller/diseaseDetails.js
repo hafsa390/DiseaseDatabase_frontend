@@ -55,5 +55,5 @@ document.getElementById("deleteBtnId").addEventListener("click", function () {
       }
     });
   }
-  alert("You are not allowed to delete the record.");
+  // alert("You are not allowed to delete the record.");
 });
