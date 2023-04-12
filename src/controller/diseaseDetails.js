@@ -22,10 +22,11 @@ getDiseaseImagesApi(disease.id, (data) => {
   if (data.success === "true") {
     if (data.images !== null && data.images.length > 0) {
       data.images.forEach((imageObject) => {
+        let imageName = imageObject.image_url.split("_")[1]
         let li = document.createElement("li");
         li.className = "image";
         li.innerHTML =
-          `<img id="img-${imageObject.id}" src="${baseUrl}/static/${imageObject.image_url}" class="image" style="margin-top: 30px" />` +
+          `<img id="img-${imageObject.id}" src="${baseUrl}/static/rd_image/${imageName}" class="image" style="margin-top: 30px" />` +
           `<label style="margin-right: 10px">Image Reference:</label>` +
           `<a target="_blank" href="${imageObject.image_ref}" >${imageObject.image_ref}</a>`;
         list.appendChild(li);
