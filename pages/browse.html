@@ -1,38 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="/css/common.css" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <title>Browse</title>
-  </head>
-  <body>
-    <div id="header_content"></div>
-    <div
-      id="container"
-      class="container"
-      style="margin-top: 30px; display: flex;"
-    >
-      <div style="display: flex; flex-direction: row;">
-        <div style="display: flex; flex-direction: column; flex: 1;">
-          <h4>Sub-category:</h4>
-          <div
-            id="category_container"
-            style="display: flex; flex-direction: column;"
-          ></div>
-        </div>
-        <div style="display: flex; border: 0; flex: 3;">
-          <table
-            id="diseaseTable"
-            class="table table-bordered invisible"
-            style="border: 0;"
-          >
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="/css/common.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <title>Browse</title>
+</head>
+
+<body>
+  <div id="header_content"></div>
+  <div id="container" class="container" style="margin-top: 30px; display: flex;">
+    <div style="display: flex; flex-direction: row;">
+      <div style="display: flex; flex-direction: column; flex: 1;">
+        <h4>Sub-category:</h4>
+        <div id="category_container" style="display: flex; flex-direction: column;"></div>
+      </div>
+      <div style="display: flex; border: 0; flex: 3; margin-left: 100px;">
+        <div styel="display: flex; flex-direction: column;">
+          <table id="diseaseTable" class="table table-bordered invisible" style="border: 0; margin-bottom: 50px;">
             <thead>
               <tr>
                 <th>ID</th>
@@ -44,17 +33,51 @@
             </thead>
             <tbody id="tableBody"></tbody>
           </table>
+          <div id="disease_details_container" class="invisible">
+            <div class="formContainer">
+              <div style="flex: 1">
+                <div class="textBoxContainer">
+                  <label>ID:</label>
+                  <input id="orphaCode_field" disabled class="textBox nonEditable" />
+                </div>
+                <div class="textBoxContainer">
+                  <label>Disease Name:</label>
+                  <input id="name_field" disabled class="textBox nonEditable" />
+                </div>
+                <div class="textBoxContainer">
+                  <label>Disease Abbreviation:</label>
+                  <input id="abbr_field" disabled class="textBox nonEditable" />
+                </div>
+                <div class="textBoxContainer">
+                  <label>Disease Subcategory:</label>
+                  <input id="subcategory_field" disabled class="textBox nonEditable" />
+                </div>
+                <div class="textBoxContainer">
+                  <label>Gene:</label>
+                  <input id="gene_field" disabled class="textBox nonEditable" />
+                </div>
+                <div class="textBoxContainer">
+                  <label>Gene Reference:</label>
+                  <input id="gene_ref_field" disabled class="textBox nonEditable" />
+                </div>
+                <ul style="margin-top: 30px;" id="disease_images_holder" class="disease_images_holder"></ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <script type="module" src="/js/controller/browse.js"></script>
-    <script>
-      $(function () {
-        $("#header_content").load("header.html", function () {
-          $("#browse").addClass("menu_item_selected");
-          document.getElementById("container").style.display = "block";
-        });
+  </div>
+  <script type="module" src="/js/controller/browse.js"></script>
+  <!-- <script type="module" src="../js/controller/diseaseDetails.js"></script> -->
+  <script>
+    $(function () {
+      $("#header_content").load("header.html", function () {
+        $("#browse").addClass("menu_item_selected");
+        document.getElementById("container").style.display = "block";
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>

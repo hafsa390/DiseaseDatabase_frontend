@@ -1,208 +1,208 @@
 .header {
-  background-color: #c0baff;
-  border-bottom: solid 1px #4f4f4f;
-  padding: 2em 8em 0em 8em;
+	background-color: #c0baff;
+	border-bottom: solid 1px #4f4f4f;
+	padding: 2em 8em 0em 8em;
 }
 .header_title {
-  margin-top: 30px;
-  margin-bottom: 50px;
+	margin-top: 30px;
+	margin-bottom: 50px;
 }
 
 .header_left {
-  display: flex;
+	display: flex;
 }
 
 .menu {
-  margin: 2em 0em 0.3em 0em;
+	margin: 2em 0em 0.3em 0em;
 }
 
 .menu_item {
-  background-color: #ffffff;
-  border-bottom: solid 1px #4f4f4f;
-  border-left: solid 1px #4f4f4f;
-  border-right: solid 1px #4f4f4f;
-  border-top: solid 1px #4f4f4f;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  font-weight: bold;
-  margin: 0em 0em 0em 2em;
-  padding: 0.5em 1em;
-  cursor: pointer;
+	background-color: #ffffff;
+	border-bottom: solid 1px #4f4f4f;
+	border-left: solid 1px #4f4f4f;
+	border-right: solid 1px #4f4f4f;
+	border-top: solid 1px #4f4f4f;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	font-weight: bold;
+	margin: 0em 0em 0em 2em;
+	padding: 0.5em 1em;
+	cursor: pointer;
 }
 
 .menu_item_selected {
-  border-bottom: solid 1px #ffffff;
+	border-bottom: solid 1px #ffffff;
 }
 
 .silent_link {
-  color: #000000;
-  cursor: pointer;
-  text-decoration: none;
+	color: #000000;
+	cursor: pointer;
+	text-decoration: none;
 }
 
 .textBox {
-  width: 350px;
+	width: 350px;
 }
 .formContainer {
-  margin-top: 10px;
-  margin-bottom: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+	margin-top: 10px;
+	margin-bottom: 60px;
+	/* display: flex; */
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 .textBoxContainer {
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
 }
 
 .endButton {
-  margin-top: 40px;
-  margin-bottom: 60px;
+	margin-top: 40px;
+	margin-bottom: 60px;
 }
 
 .full-width {
-  width: 800px;
-  margin-bottom: 10px;
+	width: 800px;
+	margin-bottom: 10px;
 }
 
 .image {
-  width: 500px;
-  margin-bottom: 10px;
+	width: 500px;
+	margin-bottom: 10px;
 }
 
 .thumbnil {
-  width: 200px;
-  margin-bottom: 10px;
+	width: 200px;
+	margin-bottom: 10px;
 }
 
 ul.disease_images_holder {
-  list-style-type: none;
-  margin-top: 30px;
+	list-style-type: none;
+	margin-top: 30px;
 }
 
 .nonEditable {
-  color: #000;
+	color: #000;
 }
 
 .btn {
-  color: black;
-  background-color: #e6e9eb;
-  border: 2px solid #c0baff;
-  border-radius: 5px;
+	color: black;
+	background-color: #e6e9eb;
+	border: 2px solid #c0baff;
+	border-radius: 5px;
 }
 
 .btn:hover {
-  background-color: #c0baff;
-  border-radius: 5px;
+	background-color: #c0baff;
+	border-radius: 5px;
 }
 
 /* The container */
 .radio_container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 16px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 16px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 /* Hide the browser's default radio button */
 .radio_container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
 }
 
 /* Create a custom radio button */
 .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #dbdbdb;
-  border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #dbdbdb;
+	border-radius: 50%;
 }
 
 /* On mouse-over, add a grey background color */
 .radio_container:hover input ~ .checkmark {
-  background-color: #a1a1a1;
+	background-color: #a1a1a1;
 }
 
 /* When the radio button is checked, add a blue background */
 .radio_container input:checked ~ .checkmark {
-  background-color: #c0baff;
+	background-color: #c0baff;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
+	content: "";
+	position: absolute;
+	display: none;
 }
 
 /* Show the indicator (dot/circle) when checked */
 .radio_container input:checked ~ .checkmark:after {
-  display: block;
+	display: block;
 }
 
 /* Style the indicator (dot/circle) */
 .radio_container .checkmark:after {
-  top: 9px;
-  left: 9px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: white;
+	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
 }
 
 .searched_items_ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style-type: none;
-  margin-top: 60px;
-  margin-bottom: 60px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	list-style-type: none;
+	margin-top: 60px;
+	margin-bottom: 60px;
 }
 
 .searched_item_li {
-  width: 570px;
-  background-color: #e6e9eb;
-  border: 2px solid #c0baff;
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 20px 50px;
-  margin-bottom: 10px;
+	width: 570px;
+	background-color: #e6e9eb;
+	border: 2px solid #c0baff;
+	border-radius: 5px;
+	cursor: pointer;
+	padding: 20px 50px;
+	margin-bottom: 10px;
 }
 
 .searched_item_li:hover {
-  background-color: #c0baff;
-  border-radius: 5px;
+	background-color: #c0baff;
+	border-radius: 5px;
 }
 
 .item-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 .invisible {
-  visibility: hidden;
+	visibility: hidden;
 }
 
 .category {
-  cursor: pointer;
-  font-size: 16px;
-  margin-bottom: 15px;
-  list-style-type: none;
+	cursor: pointer;
+	font-size: 16px;
+	margin-bottom: 15px;
+	list-style-type: none;
 }
 
 .category:hover {
-  color: #c0baff;
+	color: #c0baff;
 }

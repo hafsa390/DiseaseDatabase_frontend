@@ -1,98 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Add disease Information</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" type="text/css" href="../css/common.css" />
-  </head>
-  <body>
-    <div class="header">
-      <div class="header_left">
-        <img
-          src="../assets/logo.jpg"
-          style="width: 150px; height: 100px; margin-right: 40px;"
-        />
-        <h1 class="header_title">Manitoba Rare Disease Database</h1>
-      </div>
-    </div>
-    <div class="formContainer">
-      <h4>Add Disease Information</h4>
-      <div style="width: 50%;">
-        <div
-          style="
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Add disease Information</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../css/common.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div id="header_content"></div>
+  <div class="container" style="margin-top: 30px;">
+    <h4>Add Disease Information</h4>
+    <div style="width: 50%;">
+      <div style="
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
             margin-bottom: 60px;
-          "
-        >
-          <button id="submitBtn" style="margin-right: 10px;" class="btn">
-            Submit
-          </button>
-          <button id="cancelBtnId" class="btn">
-            Cancel
-          </button>
-        </div>
-        <div class="textBoxContainer">
-          <label for="orphaCode">ID:</label>
-          <input
-            type="text"
-            id="orphaCode"
-            name="orphaCode"
-            class="textBox"
-            placeholder="Required"
-          />
-        </div>
-        <div class="textBoxContainer">
-          <label for="dname">Disease Name:</label>
-          <input
-            type="text"
-            id="dname"
-            name="dname"
-            class="textBox"
-            placeholder="Required"
-          />
-        </div>
-        <div class="textBoxContainer">
-          <label for="dabbr">Disease Abbreviation:</label>
-          <input type="text" id="dabbr" name="dabbr" class="textBox" />
-        </div>
-        <div class="textBoxContainer">
-          <label for="sub_category">Disease Subcategory:</label>
-          <input type="text" id="sub_category" name="sdsub" class="textBox" />
-        </div>
-        <div class="textBoxContainer">
-          <label for="gene_name">Gene:</label>
-          <input type="text" id="gene_name" name="gene" class="textBox" />
-        </div>
-        <div class="textBoxContainer">
-          <label for="gene_ref">Gene Reference:</label>
-          <input type="text" id="gene_ref" name="gene ref" class="textBox" />
-        </div>
-        <ul
-          style="margin-top: 30px;"
-          id="disease_images_holder"
-          class="disease_images_holder"
-        ></ul>
-        <div style="margin-top: 60px;">
-          <!--          <input class="btn" id="submitBtn" type="submit" value="Submit" />-->
-          <input
-            class="btn"
-            id="imageSelector"
-            value="Choose Images"
-            type="file"
-            accept="image/jpeg, image/png"
-            multiple
-          />
-        </div>
+          ">
+        <button id="submitBtn" style="margin-right: 10px;" class="btn">
+          Submit
+        </button>
+        <button id="cancelBtnId" class="btn">
+          Clear
+        </button>
+      </div>
+      <div class="textBoxContainer">
+        <label for="orphaCode">ID:</label>
+        <input type="text" id="orphaCode" name="orphaCode" class="textBox" placeholder="Required" />
+      </div>
+      <div class="textBoxContainer">
+        <label for="dname">Disease Name:</label>
+        <input type="text" id="dname" name="dname" class="textBox" placeholder="Required" />
+      </div>
+      <div class="textBoxContainer">
+        <label for="dabbr">Disease Abbreviation:</label>
+        <input type="text" id="dabbr" name="dabbr" class="textBox" />
+      </div>
+      <div class="textBoxContainer">
+        <label for="sub_category">Disease Subcategory:</label>
+        <input type="text" id="sub_category" name="sdsub" class="textBox" />
+      </div>
+      <div class="textBoxContainer">
+        <label for="gene_name">Gene:</label>
+        <input type="text" id="gene_name" name="gene" class="textBox" />
+      </div>
+      <div class="textBoxContainer">
+        <label for="gene_ref">Gene Reference:</label>
+        <input type="text" id="gene_ref" name="gene ref" class="textBox" />
+      </div>
+      <ul style="margin-top: 30px;" id="disease_images_holder" class="disease_images_holder"></ul>
+      <div style="margin-top: 60px;">
+        <!--          <input class="btn" id="submitBtn" type="submit" value="Submit" />-->
+        <input class="btn" id="imageSelector" value="Choose Images" type="file" accept="image/jpeg, image/png"
+          multiple />
       </div>
     </div>
-    <script type="module" src="../js/controller/addDiseaseForm.js"></script>
-  </body>
+  </div>
+  <script>
+    $(function () {
+      $("#header_content").load("header.html", function () {
+        $("#add_disease").addClass("menu_item_selected");
+        document.getElementById("container").style.display = "block";
+      });
+    });
+  </script>
+  <script type="module" src="../js/controller/addDiseaseForm.js"></script>
+</body>
+
 </html>

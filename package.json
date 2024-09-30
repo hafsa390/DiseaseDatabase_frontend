@@ -1,37 +1,37 @@
 {
-  "name": "disease_database",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
-  "directories": {
-    "lib": "lib"
-  },
-  "engines": {
-    "node": "14.18.1"
-  },
-  "dependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.11.5",
-    "babel-loader": "^8.1.0",
-    "html-webpack-plugin": "^4.4.1",
-    "http-server": "^14.1.1",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.11.5",
-    "babel-loader": "^8.1.0",
-    "html-webpack-plugin": "^4.4.1",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
-  },
-  "scripts": {
-    "build": "webpack --mode production",
-    "start": "npm run build && http-server -c -1"
-  },
-  "author": "",
-  "license": "ISC"
+	"name": "disease_database",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.html",
+	"directories": {
+		"lib": "lib"
+	},
+	"engines": {
+		"node": "18.19.1"
+	},
+	"dependencies": {
+		"@babel/core": "^7.11.6",
+		"@babel/preset-env": "^7.11.5",
+		"babel-loader": "^8.1.0",
+		"html-webpack-plugin": "^4.4.1",
+		"http-server": "^14.1.1",
+		"webpack": "^4.44.2",
+		"webpack-cli": "^3.3.12",
+		"webpack-dev-server": "^3.11.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.11.6",
+		"@babel/preset-env": "^7.11.5",
+		"babel-loader": "^8.1.0",
+		"html-webpack-plugin": "^4.4.1",
+		"webpack": "^4.44.2",
+		"webpack-cli": "^3.3.12",
+		"webpack-dev-server": "^3.11.0"
+	},
+	"scripts": {
+		"build": "webpack --mode production",
+		"start": "yarn build && http-server -c -1"
+	},
+	"author": "",
+	"license": "ISC"
 }
